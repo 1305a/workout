@@ -9,9 +9,40 @@
 </head>
 <body>
     <div class = "bodywrapper">
-        <div class = "mainwrapper">
-            <h1>Заголовок</h1>
+        <div class = "main-header bb">
+            <h1>Разминка</h1>
         </div>
+        <main class="main-game bb">
+            <div class="quantity">
+                <input type="number" class="input-quantity" value = "1" title="Введи количество игроков" min="1" max="5">
+                <button class="button-updown button-up">&#9650;</button>
+                <button class="button-updown button-down">&#9660;</button>
+                <div class="text-quantity">Количество игроков (макс. 5)</div>
+            </div>
+            <div class="gamers">
+                <div class="gamer1">
+                    Первый игрок: 
+                    <input class="input-gamer1" type="text" maxlength = "50" pattern = "Игрок 1">
+                </div>
+                <div class="gamer1">
+                    Второй игрок: 
+                    <input class="input-gamer2" type="text" maxlength = "50" pattern = "Игрок 1">
+                </div>
+                <div class="gamer1">
+                    Третий игрок: 
+                    <input class="input-gamer3" type="text" maxlength = "50" pattern = "Игрок 1">
+                </div>
+                <div class="gamer1">
+                    Четвертый игрок: 
+                    <input class="input-gamer4" type="text" maxlength = "50" pattern = "Игрок 1">
+                </div>
+                <div class="gamer1">
+                    Пятый игрок: 
+                    <input class="input-gamer5" type="text" maxlength = "50" pattern = "Игрок 1">
+                </div>
+            </div>
+
+        </main>
     </div>
     <script src="js/main.min.js"></script>
 </body>

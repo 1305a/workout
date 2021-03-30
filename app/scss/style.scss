@@ -1,6 +1,69 @@
-.mainwrapper {
-    width: 800px;
+.bb {
+    // border: 1px solid red;
+}
+
+.main-header {
+    width: 400px;
     height: 100px;
     margin: auto;
-    border: 1px solid red;
+}
+
+.main-game {
+    width: 400px;
+    margin: auto;
+}
+
+//выбор количества
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input-quantity {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.button-updown {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.button-up {
+    
+}
+
+.button-down {
+    
+}
+
+.text-quantity {
+    margin-left: 10px;
+}
+
+//Имена игроков
+
+.gamers {
+    margin-top: 20px;
+    border-top: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamer1 {
+    margin-top: 20px;
 }
