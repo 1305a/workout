@@ -10,37 +10,158 @@
 <body>
     <div class = "bodywrapper">
         <div class = "main-header bb">
-            <h1>Разминка</h1>
+            
         </div>
         <main class="main-game bb">
+            <!--Количество игроков-->
             <div class="quantity">
-                <input type="number" class="input-quantity" value = "1" title="Введи количество игроков" min="1" max="5">
+                <input type="number" class="input-quantity" value = "1" title="Введи количество игроков" readonly>
                 <button class="button-updown button-up">&#9650;</button>
                 <button class="button-updown button-down">&#9660;</button>
                 <div class="text-quantity">Количество игроков (макс. 5)</div>
             </div>
-            <div class="gamers">
-                <div class="gamer1">
-                    Первый игрок: 
-                    <input class="input-gamer1" type="text" maxlength = "50" pattern = "Игрок 1">
+            <!--Игроки-->
+            <div class="players">
+                <div class="player1 players-textinput">
+                    <div class="players-text">Первый игрок:</div>
+                    <input class="player1-input players-input" type="text" maxlength = "50">
                 </div>
-                <div class="gamer1">
-                    Второй игрок: 
-                    <input class="input-gamer2" type="text" maxlength = "50" pattern = "Игрок 1">
+                <div class="player2 players-textinput">
+                    <div class="players-text">Второй игрок:</div>
+                    <input class="player2-input players-input" type="text" maxlength = "50">
                 </div>
-                <div class="gamer1">
-                    Третий игрок: 
-                    <input class="input-gamer3" type="text" maxlength = "50" pattern = "Игрок 1">
+                <div class="player3 players-textinput">
+                    <div class="players-text">Третий игрок:</div>
+                    <input class="player3-input players-input" type="text" maxlength = "50">
                 </div>
-                <div class="gamer1">
-                    Четвертый игрок: 
-                    <input class="input-gamer4" type="text" maxlength = "50" pattern = "Игрок 1">
+                <div class="player4 players-textinput">
+                    <div class="players-text">Четвертый игрок:</div>
+                    <input class="player4-input players-input" type="text" maxlength = "50">
                 </div>
-                <div class="gamer1">
-                    Пятый игрок: 
-                    <input class="input-gamer5" type="text" maxlength = "50" pattern = "Игрок 1">
+                <div class="player5 players-textinput bb">
+                    <div class="players-text bb">Пятый игрок:</div>
+                    <input class="player5-input players-input bb" type="text" maxlength = "50">
                 </div>
             </div>
+            <!--Задания-->
+            <!-- <div class="taskswrapper bb">
+                <div class="tasks bb">
+                    <div class="task1 task-item bb">Отжимание</div>
+                    <div class="task2 task-item bb">Планка (мин)</div>
+                    <div class="task3 task-item">Скакалка</div>
+                    <div class="task4 task-item">Бицепс</div>
+                    <div class="task5 task-item">Трицепс</div>
+                    <div class="task6 task-item">Приседания</div>
+                    <div class="task7 task-item">Колесо</div>
+                    <div class="task8 task-item">Еще одно</div>
+                    <div class="task9 task-item">Новое</div>
+                    <div class="task10 task-item bb">Новое</div>
+                </div>
+                <div>
+                    <input type="number" class="input-task-player1 input-item bb">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item">
+                    <input type="number" class="input-task-player1 input-item bb">
+                </div>
+            </div> -->
+
+
+            <table class="maintable">
+                <tr>
+                    <td></td>
+                    <td class="table-header">Игрок 1</td>
+                    <td class="table-header">Игрок 2</td>
+                    <td class="table-header">Игрок 3</td>
+                    <td class="table-header">Игрок 4</td>
+                    <td class="table-header">Игрок 5</td>
+                </tr>
+                <tr>
+                    <td>Отжимание</td>
+                    <td><input type="number" class="input-task-player1 input-item bb"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Планка (мин)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Скакалка</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Бицепс</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Трицепс</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Приседания</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Колесо</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Пресс</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Флексить</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Боевой гапак</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
 
         </main>
     </div>

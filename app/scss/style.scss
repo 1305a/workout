@@ -1,11 +1,15 @@
 .bb {
-    // border: 1px solid red;
+    //border: 1px solid red;
 }
 
 .main-header {
     width: 400px;
     height: 100px;
     margin: auto;
+    //background-color: salmon;
+    background: url(../images/pomidor7.png) no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .main-game {
@@ -43,27 +47,66 @@ input::-webkit-inner-spin-button {
     margin-right: 5px;
 }
 
-.button-up {
-    
-}
-
-.button-down {
-    
-}
-
 .text-quantity {
     margin-left: 10px;
 }
 
 //Имена игроков
 
-.gamers {
+.players {
     margin-top: 20px;
     border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.gamer1 {
-    margin-top: 20px;
+.players-textinput {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.player-hide {
+    display: none;
+}
+
+.players-text {
+    width: 130px;
+}
+
+.players-input {
+    height: 20px;
+    flex-grow: 1;
+}
+
+.taskswrapper {
+    display: flex;
+    padding-top: 10px;
+}
+
+.task-item {
+    width: 130px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-item {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.maintable {
+    margin-top: 50px;
+}
+
+.table-header {
+    transform: rotate(-0.25turn) translate(20px, 0px);
 }
