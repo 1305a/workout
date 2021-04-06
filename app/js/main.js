@@ -12,6 +12,7 @@ const arrrayPlayers = [player1, player2, player3, player4, player5]
 
 
 
+
 function hidePlayers() {
     for (let i = 0; i < inputQuantity.valueAsNumber; i++) {
         if (arrrayPlayers[i].classList.contains('player-hide') === true)  {
