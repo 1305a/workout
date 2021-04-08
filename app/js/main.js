@@ -7,6 +7,7 @@ const player2 = document.querySelector('.player2')
 const player3 = document.querySelector('.player3')
 const player4 = document.querySelector('.player4')
 const player5 = document.querySelector('.player5')
+const testButton = document.querySelector('.testbutton')
 const arrrayPlayers = [player1, player2, player3, player4, player5]
 
 const bigArr = []
@@ -34,7 +35,6 @@ buttonUp.addEventListener ('click', (event) => {
         bigArr.length = 0
         arrayForming (inputQuantity.valueAsNumber)
     }
-    displayTable()
 })
 
 buttonDown.addEventListener ('click', (event) => {
@@ -47,16 +47,35 @@ buttonDown.addEventListener ('click', (event) => {
     }
 })
 
+testButton.addEventListener ('click', (event) => {
+    event.preventDefault()
+    // idDoc = document.getElementById('10')
+    // console.log(bigArr)
+    for (let i = 1; i < bigArr.length; i++) {
+        //const element = bigArr[i];
+        for (let j = 0; j < bigArr[i].length; j++) {
+            //console.log(document.getElementById(bigArr[i][j]))
+            //bigArr[i][j] = document.getElementById(bigArr[i][j])
+            bigArr[i][j] = document.getElementById(bigArr[i][j])
+        }
+        
+    }
+    console.log(bigArr)
+})
+
 function arrayForming (quantityPlayers) {
     bigArr.push(arrTasks)
     for (let i=0; i<quantityPlayers; i++) {
         const arrPlayer = []
         for (let index = 0; index < arrTasks.length; index++) {
-                const inputItem = document.createElement('input')
-                arrPlayer.push(inputItem)
+                //const inputItem = document.createElement('input')
+                //arrPlayer.push(inputItem)
+                arrPlayer.push(0)
         }
         bigArr.push(arrPlayer)
     }
+    //console.log(bigArr)
+    displayTable()
 }
 
 function displayTable() {
@@ -64,16 +83,18 @@ function displayTable() {
         tableItems.removeChild(tableItems.firstChild);
       }
 
-    for (let iTen = 1; iTen < 10; iTen++) {
+    for (let iTen = 0; iTen < 10; iTen++) {
         let tr = document.createElement('tr')
         for (let i = 0; i < bigArr.length; i++) {
             let td = document.createElement('td')
-            //let input = document.createElement('input')
             if (i != 0) {
-                //td.innerHTML = bigArr[i][iTen]
                 tr.appendChild(td)
-                console.log(bigArr[i][iTen])
-                td.appendChild(bigArr[i][iTen])
+                const inputItem = document.createElement('input')
+                inputItem.type = "number"
+                const setId = `${i}${iTen}`
+                inputItem.id = setId
+                td.appendChild(inputItem)
+                bigArr[i][iTen] = setId
             }
             else {
                 td.innerHTML = bigArr[i][iTen]
@@ -82,7 +103,7 @@ function displayTable() {
         }
         tableItems.appendChild(tr)
     }
-      
+    //console.log(bigArr)
 }
 
 
