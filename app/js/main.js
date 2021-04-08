@@ -7,22 +7,34 @@ const player2 = document.querySelector('.player2')
 const player3 = document.querySelector('.player3')
 const player4 = document.querySelector('.player4')
 const player5 = document.querySelector('.player5')
+const tdPlayer1 = document.querySelector('.td-player1')
+const tdPlayer2 = document.querySelector('.td-player2')
+const tdPlayer3 = document.querySelector('.td-player3')
+const tdPlayer4 = document.querySelector('.td-player4')
+const tdPlayer5 = document.querySelector('.td-player5')
 const testButton = document.querySelector('.testbutton')
 const arrrayPlayers = [player1, player2, player3, player4, player5]
+const arrrayTdPlayers = [tdPlayer1, tdPlayer2, tdPlayer3, tdPlayer4, tdPlayer5]
 
 const bigArr = []
 const arrTasks = ['Отжимание','Планка (мин)','Скакалка','Бицепс','Трицепс','Приседания','Колесо','Пресс','Флекс','Боевой гапак']
-const tableItems = document.querySelector('.testtable')
+const tableItems = document.querySelector('.maintable')
 
 function hidePlayers(quantityPlayers) {
     for (let i = 0; i < quantityPlayers; i++) {
         if (arrrayPlayers[i].classList.contains('player-hide') === true)  {
             arrrayPlayers[i].classList.remove('player-hide')
         }
+        if (arrrayTdPlayers[i].classList.contains('player-hide') === true)  {
+            arrrayTdPlayers[i].classList.remove('player-hide')
+        }
     }
     for (let i = quantityPlayers; i < 5; i++) {
         if (arrrayPlayers[i].classList.contains('player-hide') === false)  {
             arrrayPlayers[i].classList.add('player-hide')
+        }
+        if (arrrayTdPlayers[i].classList.contains('player-hide') === false)  {
+            arrrayTdPlayers[i].classList.add('player-hide')
         }
     }
 }
@@ -74,30 +86,33 @@ function arrayForming (quantityPlayers) {
         }
         bigArr.push(arrPlayer)
     }
-    //console.log(bigArr)
     displayTable()
 }
 
 function displayTable() {
     while (tableItems.firstChild) {
         tableItems.removeChild(tableItems.firstChild);
-      }
+    }
 
     for (let iTen = 0; iTen < 10; iTen++) {
         let tr = document.createElement('tr')
         for (let i = 0; i < bigArr.length; i++) {
             let td = document.createElement('td')
+            td.className = "td-input-item"
             if (i != 0) {
                 tr.appendChild(td)
                 const inputItem = document.createElement('input')
                 inputItem.type = "number"
                 const setId = `${i}${iTen}`
                 inputItem.id = setId
+                //inputItem.class = "input-item"
+                inputItem.className = "input-item"
                 td.appendChild(inputItem)
                 bigArr[i][iTen] = setId
             }
             else {
                 td.innerHTML = bigArr[i][iTen]
+                td.className = "task-item"
                 tr.appendChild(td)
             }
         }

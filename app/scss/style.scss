@@ -1,5 +1,5 @@
 .bb {
-    border: 1px solid red;
+    //border: 1px solid red;
 }
 
 .main-header {
@@ -55,8 +55,8 @@ input::-webkit-inner-spin-button {
 
 .players {
     margin-top: 20px;
-    border-top: 1px dashed black;
-    border-bottom: 1px dashed black;
+    //border-top: 1px solid black;
+    //border-bottom: 1px solid black;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -88,23 +88,32 @@ input::-webkit-inner-spin-button {
 }
 
 .task-item {
-    width: 130px;
+    width: 100px;
     height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
 }
 
 .input-item {
-    width: 30px;
+    width: 40px;
     height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+}
+
+.td-input-item {
+    width: 55px;
+    //text-align: center;
+}
+
+.maintable-old {
+    margin-top: 50px;
 }
 
 .maintable {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .table-header {
