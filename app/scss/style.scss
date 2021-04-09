@@ -114,8 +114,24 @@ input::-webkit-inner-spin-button {
 
 .maintable {
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .table-header {
     transform: rotate(-0.25turn) translate(20px, 0px);
+}
+
+.level {
+    //margin-left: 50px;
+    width: 100px;
+}
+
+.calculate {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.calculatewrapper {
+    display: flex;
+    justify-content: center;
 }
